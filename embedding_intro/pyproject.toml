@@ -1,0 +1,20 @@
+[project]
+name = "embedding-intro"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "JosephTsui",email = "joseph_tsui@systemweb.com.tw"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "sentence-transformers (>=4.1.0,<5.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "embedding_intro", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
