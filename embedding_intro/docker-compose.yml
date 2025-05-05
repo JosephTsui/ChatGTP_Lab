@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db:
+    image: ankane/pgvector
+    restart: always
+    environment:
+      POSTGRES_USER: postgres # 資料庫帳號
+      POSTGRES_PASSWORD: Admin123 # 資料庫密碼
+      POSTGRES_DB: vector # 資料庫名稱
+    volumes:
+      - ./data:/var/lib/postgresql/data # 將本地的 ./data 資料夾掛載到容器內的 /var/lib/postgresql/data
+    ports:
+      - "5432:5432" # 資料庫連接埠
